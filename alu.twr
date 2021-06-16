@@ -1,0 +1,853 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+E:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3 -n 3
+-fastpaths -xml alu.twx alu.ncd -o alu.twr alu.pcf
+
+Design file:              alu.ncd
+Physical constraint file: alu.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock Operation<0>
+------------+------------+------------+------------+------------+----------------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                            | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)           | Phase  |
+------------+------------+------------+------------+------------+----------------------------+--------+
+DataA<0>    |    1.751(F)|      SLOW  |    2.978(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<1>    |    1.789(F)|      SLOW  |    2.437(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<2>    |    1.799(F)|      SLOW  |    2.246(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<3>    |    1.464(F)|      SLOW  |    2.640(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<4>    |    1.551(F)|      SLOW  |    2.228(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<5>    |    1.661(F)|      SLOW  |    2.627(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<6>    |    1.587(F)|      SLOW  |    2.487(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<7>    |    1.474(F)|      SLOW  |    2.531(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<8>    |    1.513(F)|      SLOW  |    2.306(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<9>    |    1.622(F)|      SLOW  |    2.432(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<10>   |    1.374(F)|      SLOW  |    2.492(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<11>   |    1.000(F)|      SLOW  |    2.950(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<12>   |    1.294(F)|      SLOW  |    2.668(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<13>   |    0.841(F)|      FAST  |    3.089(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<14>   |    0.938(F)|      SLOW  |    2.839(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<15>   |    1.037(F)|      SLOW  |    2.897(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<16>   |    0.675(F)|      FAST  |    3.050(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<17>   |    1.207(F)|      SLOW  |    3.001(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<18>   |    1.186(F)|      SLOW  |    3.070(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<19>   |    0.833(F)|      FAST  |    2.737(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<20>   |    0.789(F)|      FAST  |    2.624(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<21>   |    0.749(F)|      FAST  |    2.589(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<22>   |    0.740(F)|      FAST  |    2.624(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<23>   |    0.980(F)|      FAST  |    3.618(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<24>   |    1.017(F)|      SLOW  |    3.466(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<25>   |    1.274(F)|      SLOW  |    3.479(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<26>   |    0.727(F)|      FAST  |    2.423(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<27>   |    1.130(F)|      SLOW  |    3.462(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<28>   |    0.638(F)|      FAST  |    2.125(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<29>   |    1.288(F)|      SLOW  |    2.554(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<30>   |    1.145(F)|      SLOW  |    2.465(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<31>   |    1.057(F)|      FAST  |    3.454(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<0>    |    1.907(F)|      SLOW  |    2.001(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<1>    |    1.584(F)|      SLOW  |    2.947(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<2>    |    1.518(F)|      SLOW  |    2.494(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<3>    |    1.445(F)|      SLOW  |    2.679(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<4>    |    1.339(F)|      SLOW  |    2.566(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<5>    |    1.683(F)|      SLOW  |    2.231(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<6>    |    1.520(F)|      SLOW  |    2.221(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<7>    |    1.165(F)|      SLOW  |    2.975(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<8>    |    1.393(F)|      SLOW  |    2.525(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<9>    |    1.279(F)|      SLOW  |    2.609(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<10>   |    1.314(F)|      SLOW  |    2.634(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<11>   |    1.229(F)|      SLOW  |    2.965(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<12>   |    0.749(F)|      FAST  |    2.779(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<13>   |    1.619(F)|      SLOW  |    2.368(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<14>   |    1.359(F)|      SLOW  |    2.914(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<15>   |    1.080(F)|      SLOW  |    2.433(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<16>   |    1.244(F)|      SLOW  |    2.943(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<17>   |    1.055(F)|      SLOW  |    2.594(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<18>   |    1.194(F)|      SLOW  |    3.011(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<19>   |    1.525(F)|      SLOW  |    2.364(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<20>   |    0.849(F)|      SLOW  |    2.523(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<21>   |    1.166(F)|      SLOW  |    2.206(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<22>   |    1.512(F)|      SLOW  |    2.360(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<23>   |    1.605(F)|      SLOW  |    3.251(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<24>   |    1.533(F)|      SLOW  |    2.999(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<25>   |    1.147(F)|      SLOW  |    3.376(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<26>   |    0.718(F)|      FAST  |    2.537(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<27>   |    1.008(F)|      FAST  |    3.564(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<28>   |    1.089(F)|      SLOW  |    2.531(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<29>   |    0.974(F)|      SLOW  |    2.595(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<30>   |    0.931(F)|      FAST  |    2.667(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<31>   |    1.075(F)|      SLOW  |    3.396(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+------------+------------+------------+------------+------------+----------------------------+--------+
+
+Setup/Hold to clock Operation<1>
+------------+------------+------------+------------+------------+----------------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                            | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)           | Phase  |
+------------+------------+------------+------------+------------+----------------------------+--------+
+DataA<0>    |    1.862(F)|      SLOW  |    2.829(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<1>    |    1.900(F)|      SLOW  |    2.288(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<2>    |    1.910(F)|      SLOW  |    2.097(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<3>    |    1.575(F)|      SLOW  |    2.491(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<4>    |    1.662(F)|      SLOW  |    2.079(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<5>    |    1.772(F)|      SLOW  |    2.478(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<6>    |    1.698(F)|      SLOW  |    2.338(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<7>    |    1.585(F)|      SLOW  |    2.382(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<8>    |    1.624(F)|      SLOW  |    2.157(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<9>    |    1.733(F)|      SLOW  |    2.283(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<10>   |    1.485(F)|      SLOW  |    2.343(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<11>   |    1.111(F)|      SLOW  |    2.801(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<12>   |    1.405(F)|      SLOW  |    2.519(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<13>   |    0.932(F)|      SLOW  |    2.940(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<14>   |    1.049(F)|      SLOW  |    2.690(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<15>   |    1.148(F)|      SLOW  |    2.748(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<16>   |    0.714(F)|      FAST  |    2.901(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<17>   |    1.318(F)|      SLOW  |    2.852(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<18>   |    1.297(F)|      SLOW  |    2.921(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<19>   |    0.908(F)|      SLOW  |    2.588(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<20>   |    0.893(F)|      SLOW  |    2.475(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<21>   |    0.836(F)|      SLOW  |    2.440(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<22>   |    0.808(F)|      SLOW  |    2.475(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<23>   |    1.088(F)|      SLOW  |    3.469(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<24>   |    1.128(F)|      SLOW  |    3.317(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<25>   |    1.385(F)|      SLOW  |    3.330(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<26>   |    0.807(F)|      SLOW  |    2.274(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<27>   |    1.241(F)|      SLOW  |    3.313(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<28>   |    0.677(F)|      FAST  |    1.976(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<29>   |    1.399(F)|      SLOW  |    2.405(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<30>   |    1.256(F)|      SLOW  |    2.316(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<31>   |    1.134(F)|      SLOW  |    3.305(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<0>    |    2.018(F)|      SLOW  |    1.852(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<1>    |    1.695(F)|      SLOW  |    2.798(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<2>    |    1.629(F)|      SLOW  |    2.345(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<3>    |    1.556(F)|      SLOW  |    2.530(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<4>    |    1.450(F)|      SLOW  |    2.417(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<5>    |    1.794(F)|      SLOW  |    2.082(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<6>    |    1.631(F)|      SLOW  |    2.072(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<7>    |    1.276(F)|      SLOW  |    2.826(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<8>    |    1.504(F)|      SLOW  |    2.376(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<9>    |    1.390(F)|      SLOW  |    2.460(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<10>   |    1.425(F)|      SLOW  |    2.485(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<11>   |    1.340(F)|      SLOW  |    2.816(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<12>   |    0.837(F)|      SLOW  |    2.630(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<13>   |    1.730(F)|      SLOW  |    2.219(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<14>   |    1.470(F)|      SLOW  |    2.765(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<15>   |    1.191(F)|      SLOW  |    2.284(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<16>   |    1.355(F)|      SLOW  |    2.794(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<17>   |    1.166(F)|      SLOW  |    2.445(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<18>   |    1.305(F)|      SLOW  |    2.862(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<19>   |    1.636(F)|      SLOW  |    2.215(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<20>   |    0.960(F)|      SLOW  |    2.374(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<21>   |    1.277(F)|      SLOW  |    2.057(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<22>   |    1.623(F)|      SLOW  |    2.211(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<23>   |    1.716(F)|      SLOW  |    3.102(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<24>   |    1.644(F)|      SLOW  |    2.850(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<25>   |    1.258(F)|      SLOW  |    3.227(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<26>   |    0.765(F)|      SLOW  |    2.388(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<27>   |    1.110(F)|      SLOW  |    3.415(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<28>   |    1.200(F)|      SLOW  |    2.382(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<29>   |    1.085(F)|      SLOW  |    2.446(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<30>   |    1.016(F)|      SLOW  |    2.518(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<31>   |    1.186(F)|      SLOW  |    3.247(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+------------+------------+------------+------------+------------+----------------------------+--------+
+
+Setup/Hold to clock Operation<2>
+------------+------------+------------+------------+------------+----------------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                            | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)           | Phase  |
+------------+------------+------------+------------+------------+----------------------------+--------+
+DataA<0>    |    1.981(F)|      SLOW  |    2.705(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<1>    |    2.019(F)|      SLOW  |    2.164(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<2>    |    2.029(F)|      SLOW  |    1.973(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<3>    |    1.694(F)|      SLOW  |    2.367(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<4>    |    1.781(F)|      SLOW  |    1.955(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<5>    |    1.891(F)|      SLOW  |    2.354(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<6>    |    1.817(F)|      SLOW  |    2.214(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<7>    |    1.704(F)|      SLOW  |    2.258(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<8>    |    1.743(F)|      SLOW  |    2.033(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<9>    |    1.852(F)|      SLOW  |    2.159(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<10>   |    1.604(F)|      SLOW  |    2.219(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<11>   |    1.230(F)|      SLOW  |    2.677(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<12>   |    1.524(F)|      SLOW  |    2.395(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<13>   |    1.051(F)|      SLOW  |    2.816(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<14>   |    1.168(F)|      SLOW  |    2.566(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<15>   |    1.267(F)|      SLOW  |    2.624(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<16>   |    0.820(F)|      FAST  |    2.777(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<17>   |    1.437(F)|      SLOW  |    2.728(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<18>   |    1.416(F)|      SLOW  |    2.797(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<19>   |    1.027(F)|      SLOW  |    2.464(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<20>   |    1.012(F)|      SLOW  |    2.351(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<21>   |    0.955(F)|      SLOW  |    2.316(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<22>   |    0.927(F)|      SLOW  |    2.351(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<23>   |    1.207(F)|      SLOW  |    3.345(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<24>   |    1.247(F)|      SLOW  |    3.193(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<25>   |    1.504(F)|      SLOW  |    3.206(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<26>   |    0.926(F)|      SLOW  |    2.150(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<27>   |    1.360(F)|      SLOW  |    3.189(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<28>   |    0.783(F)|      FAST  |    1.852(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<29>   |    1.518(F)|      SLOW  |    2.281(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<30>   |    1.375(F)|      SLOW  |    2.192(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<31>   |    1.253(F)|      SLOW  |    3.181(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<0>    |    2.137(F)|      SLOW  |    1.728(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<1>    |    1.814(F)|      SLOW  |    2.674(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<2>    |    1.748(F)|      SLOW  |    2.221(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<3>    |    1.675(F)|      SLOW  |    2.406(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<4>    |    1.569(F)|      SLOW  |    2.293(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<5>    |    1.913(F)|      SLOW  |    1.958(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<6>    |    1.750(F)|      SLOW  |    1.948(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<7>    |    1.395(F)|      SLOW  |    2.702(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<8>    |    1.623(F)|      SLOW  |    2.252(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<9>    |    1.509(F)|      SLOW  |    2.336(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<10>   |    1.544(F)|      SLOW  |    2.361(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<11>   |    1.459(F)|      SLOW  |    2.692(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<12>   |    0.956(F)|      SLOW  |    2.506(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<13>   |    1.849(F)|      SLOW  |    2.095(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<14>   |    1.589(F)|      SLOW  |    2.641(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<15>   |    1.310(F)|      SLOW  |    2.160(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<16>   |    1.474(F)|      SLOW  |    2.670(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<17>   |    1.285(F)|      SLOW  |    2.321(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<18>   |    1.424(F)|      SLOW  |    2.738(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<19>   |    1.755(F)|      SLOW  |    2.091(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<20>   |    1.079(F)|      SLOW  |    2.250(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<21>   |    1.396(F)|      SLOW  |    1.933(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<22>   |    1.742(F)|      SLOW  |    2.087(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<23>   |    1.835(F)|      SLOW  |    2.978(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<24>   |    1.763(F)|      SLOW  |    2.726(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<25>   |    1.377(F)|      SLOW  |    3.103(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<26>   |    0.884(F)|      SLOW  |    2.264(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<27>   |    1.229(F)|      SLOW  |    3.291(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<28>   |    1.319(F)|      SLOW  |    2.258(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<29>   |    1.204(F)|      SLOW  |    2.322(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<30>   |    1.135(F)|      SLOW  |    2.394(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<31>   |    1.305(F)|      SLOW  |    3.123(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+------------+------------+------------+------------+------------+----------------------------+--------+
+
+Setup/Hold to clock Operation<3>
+------------+------------+------------+------------+------------+----------------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                            | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)           | Phase  |
+------------+------------+------------+------------+------------+----------------------------+--------+
+DataA<0>    |    2.396(F)|      SLOW  |    2.204(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<1>    |    2.434(F)|      SLOW  |    1.663(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<2>    |    2.444(F)|      SLOW  |    1.472(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<3>    |    2.109(F)|      SLOW  |    1.866(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<4>    |    2.196(F)|      SLOW  |    1.454(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<5>    |    2.306(F)|      SLOW  |    1.853(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<6>    |    2.232(F)|      SLOW  |    1.713(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<7>    |    2.119(F)|      SLOW  |    1.757(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<8>    |    2.158(F)|      SLOW  |    1.532(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<9>    |    2.267(F)|      SLOW  |    1.658(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<10>   |    2.019(F)|      SLOW  |    1.718(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<11>   |    1.645(F)|      SLOW  |    2.176(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<12>   |    1.939(F)|      SLOW  |    1.894(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<13>   |    1.466(F)|      SLOW  |    2.315(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<14>   |    1.583(F)|      SLOW  |    2.065(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<15>   |    1.682(F)|      SLOW  |    2.123(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<16>   |    1.184(F)|      SLOW  |    2.276(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<17>   |    1.852(F)|      SLOW  |    2.227(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<18>   |    1.831(F)|      SLOW  |    2.296(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<19>   |    1.442(F)|      SLOW  |    1.963(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<20>   |    1.427(F)|      SLOW  |    1.850(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<21>   |    1.370(F)|      SLOW  |    1.815(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<22>   |    1.342(F)|      SLOW  |    1.850(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<23>   |    1.622(F)|      SLOW  |    2.844(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<24>   |    1.662(F)|      SLOW  |    2.692(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<25>   |    1.919(F)|      SLOW  |    2.705(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<26>   |    1.341(F)|      SLOW  |    1.649(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<27>   |    1.775(F)|      SLOW  |    2.688(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<28>   |    1.141(F)|      SLOW  |    1.351(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<29>   |    1.933(F)|      SLOW  |    1.780(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<30>   |    1.790(F)|      SLOW  |    1.691(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<31>   |    1.668(F)|      SLOW  |    2.680(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<0>    |    2.552(F)|      SLOW  |    1.227(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<1>    |    2.229(F)|      SLOW  |    2.173(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<2>    |    2.163(F)|      SLOW  |    1.720(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<3>    |    2.090(F)|      SLOW  |    1.905(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<4>    |    1.984(F)|      SLOW  |    1.792(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<5>    |    2.328(F)|      SLOW  |    1.457(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<6>    |    2.165(F)|      SLOW  |    1.447(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<7>    |    1.810(F)|      SLOW  |    2.201(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<8>    |    2.038(F)|      SLOW  |    1.751(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<9>    |    1.924(F)|      SLOW  |    1.835(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<10>   |    1.959(F)|      SLOW  |    1.860(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<11>   |    1.874(F)|      SLOW  |    2.191(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<12>   |    1.371(F)|      SLOW  |    2.005(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<13>   |    2.264(F)|      SLOW  |    1.594(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<14>   |    2.004(F)|      SLOW  |    2.140(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<15>   |    1.725(F)|      SLOW  |    1.659(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<16>   |    1.889(F)|      SLOW  |    2.169(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<17>   |    1.700(F)|      SLOW  |    1.820(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<18>   |    1.839(F)|      SLOW  |    2.237(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<19>   |    2.170(F)|      SLOW  |    1.590(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<20>   |    1.494(F)|      SLOW  |    1.749(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<21>   |    1.811(F)|      SLOW  |    1.432(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<22>   |    2.157(F)|      SLOW  |    1.586(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<23>   |    2.250(F)|      SLOW  |    2.477(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<24>   |    2.178(F)|      SLOW  |    2.225(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<25>   |    1.792(F)|      SLOW  |    2.602(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<26>   |    1.299(F)|      SLOW  |    1.763(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<27>   |    1.644(F)|      SLOW  |    2.790(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<28>   |    1.734(F)|      SLOW  |    1.757(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<29>   |    1.619(F)|      SLOW  |    1.821(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<30>   |    1.550(F)|      SLOW  |    1.893(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<31>   |    1.720(F)|      SLOW  |    2.622(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+------------+------------+------------+------------+------------+----------------------------+--------+
+
+Setup/Hold to clock Operation<4>
+------------+------------+------------+------------+------------+----------------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                            | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)           | Phase  |
+------------+------------+------------+------------+------------+----------------------------+--------+
+DataA<0>    |    2.165(F)|      SLOW  |    2.470(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<1>    |    2.203(F)|      SLOW  |    1.929(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<2>    |    2.213(F)|      SLOW  |    1.738(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<3>    |    1.878(F)|      SLOW  |    2.132(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<4>    |    1.965(F)|      SLOW  |    1.720(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<5>    |    2.075(F)|      SLOW  |    2.119(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<6>    |    2.001(F)|      SLOW  |    1.979(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<7>    |    1.888(F)|      SLOW  |    2.023(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<8>    |    1.927(F)|      SLOW  |    1.798(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<9>    |    2.036(F)|      SLOW  |    1.924(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<10>   |    1.788(F)|      SLOW  |    1.984(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<11>   |    1.414(F)|      SLOW  |    2.442(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<12>   |    1.708(F)|      SLOW  |    2.160(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<13>   |    1.235(F)|      SLOW  |    2.581(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<14>   |    1.352(F)|      SLOW  |    2.331(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<15>   |    1.451(F)|      SLOW  |    2.389(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<16>   |    0.953(F)|      SLOW  |    2.542(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<17>   |    1.621(F)|      SLOW  |    2.493(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<18>   |    1.600(F)|      SLOW  |    2.562(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<19>   |    1.211(F)|      SLOW  |    2.229(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<20>   |    1.196(F)|      SLOW  |    2.116(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<21>   |    1.139(F)|      SLOW  |    2.081(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<22>   |    1.111(F)|      SLOW  |    2.116(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<23>   |    1.391(F)|      SLOW  |    3.110(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<24>   |    1.431(F)|      SLOW  |    2.958(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<25>   |    1.688(F)|      SLOW  |    2.971(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<26>   |    1.110(F)|      SLOW  |    1.915(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<27>   |    1.544(F)|      SLOW  |    2.954(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<28>   |    0.910(F)|      SLOW  |    1.617(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<29>   |    1.702(F)|      SLOW  |    2.046(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<30>   |    1.559(F)|      SLOW  |    1.957(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<31>   |    1.437(F)|      SLOW  |    2.946(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<0>    |    2.321(F)|      SLOW  |    1.493(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<1>    |    1.998(F)|      SLOW  |    2.439(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<2>    |    1.932(F)|      SLOW  |    1.986(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<3>    |    1.859(F)|      SLOW  |    2.171(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<4>    |    1.753(F)|      SLOW  |    2.058(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<5>    |    2.097(F)|      SLOW  |    1.723(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<6>    |    1.934(F)|      SLOW  |    1.713(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<7>    |    1.579(F)|      SLOW  |    2.467(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<8>    |    1.807(F)|      SLOW  |    2.017(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<9>    |    1.693(F)|      SLOW  |    2.101(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<10>   |    1.728(F)|      SLOW  |    2.126(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<11>   |    1.643(F)|      SLOW  |    2.457(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<12>   |    1.140(F)|      SLOW  |    2.271(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<13>   |    2.033(F)|      SLOW  |    1.860(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<14>   |    1.773(F)|      SLOW  |    2.406(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<15>   |    1.494(F)|      SLOW  |    1.925(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<16>   |    1.658(F)|      SLOW  |    2.435(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<17>   |    1.469(F)|      SLOW  |    2.086(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<18>   |    1.608(F)|      SLOW  |    2.503(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<19>   |    1.939(F)|      SLOW  |    1.856(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<20>   |    1.263(F)|      SLOW  |    2.015(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<21>   |    1.580(F)|      SLOW  |    1.698(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<22>   |    1.926(F)|      SLOW  |    1.852(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<23>   |    2.019(F)|      SLOW  |    2.743(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<24>   |    1.947(F)|      SLOW  |    2.491(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<25>   |    1.561(F)|      SLOW  |    2.868(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<26>   |    1.068(F)|      SLOW  |    2.029(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<27>   |    1.413(F)|      SLOW  |    3.056(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<28>   |    1.503(F)|      SLOW  |    2.023(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<29>   |    1.388(F)|      SLOW  |    2.087(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<30>   |    1.319(F)|      SLOW  |    2.159(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<31>   |    1.489(F)|      SLOW  |    2.888(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+------------+------------+------------+------------+------------+----------------------------+--------+
+
+Setup/Hold to clock Operation<5>
+------------+------------+------------+------------+------------+----------------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                            | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)           | Phase  |
+------------+------------+------------+------------+------------+----------------------------+--------+
+DataA<0>    |    1.931(F)|      SLOW  |    2.756(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<1>    |    1.969(F)|      SLOW  |    2.215(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<2>    |    1.979(F)|      SLOW  |    2.024(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<3>    |    1.644(F)|      SLOW  |    2.418(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<4>    |    1.731(F)|      SLOW  |    2.006(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<5>    |    1.841(F)|      SLOW  |    2.405(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<6>    |    1.767(F)|      SLOW  |    2.265(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<7>    |    1.654(F)|      SLOW  |    2.309(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<8>    |    1.693(F)|      SLOW  |    2.084(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<9>    |    1.802(F)|      SLOW  |    2.210(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<10>   |    1.554(F)|      SLOW  |    2.270(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<11>   |    1.180(F)|      SLOW  |    2.728(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<12>   |    1.474(F)|      SLOW  |    2.446(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<13>   |    1.001(F)|      SLOW  |    2.867(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<14>   |    1.118(F)|      SLOW  |    2.617(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<15>   |    1.217(F)|      SLOW  |    2.675(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<16>   |    0.784(F)|      FAST  |    2.828(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<17>   |    1.387(F)|      SLOW  |    2.779(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<18>   |    1.366(F)|      SLOW  |    2.848(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<19>   |    0.977(F)|      SLOW  |    2.515(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<20>   |    0.962(F)|      SLOW  |    2.402(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<21>   |    0.905(F)|      SLOW  |    2.367(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<22>   |    0.877(F)|      SLOW  |    2.402(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<23>   |    1.157(F)|      SLOW  |    3.396(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<24>   |    1.197(F)|      SLOW  |    3.244(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<25>   |    1.454(F)|      SLOW  |    3.257(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<26>   |    0.876(F)|      SLOW  |    2.201(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<27>   |    1.310(F)|      SLOW  |    3.240(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<28>   |    0.747(F)|      FAST  |    1.903(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<29>   |    1.468(F)|      SLOW  |    2.332(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<30>   |    1.325(F)|      SLOW  |    2.243(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataA<31>   |    1.203(F)|      SLOW  |    3.232(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<0>    |    2.087(F)|      SLOW  |    1.779(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<1>    |    1.764(F)|      SLOW  |    2.725(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<2>    |    1.698(F)|      SLOW  |    2.272(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<3>    |    1.625(F)|      SLOW  |    2.457(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<4>    |    1.519(F)|      SLOW  |    2.344(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<5>    |    1.863(F)|      SLOW  |    2.009(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<6>    |    1.700(F)|      SLOW  |    1.999(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<7>    |    1.345(F)|      SLOW  |    2.753(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<8>    |    1.573(F)|      SLOW  |    2.303(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<9>    |    1.459(F)|      SLOW  |    2.387(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<10>   |    1.494(F)|      SLOW  |    2.412(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<11>   |    1.409(F)|      SLOW  |    2.743(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<12>   |    0.906(F)|      SLOW  |    2.557(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<13>   |    1.799(F)|      SLOW  |    2.146(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<14>   |    1.539(F)|      SLOW  |    2.692(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<15>   |    1.260(F)|      SLOW  |    2.211(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<16>   |    1.424(F)|      SLOW  |    2.721(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<17>   |    1.235(F)|      SLOW  |    2.372(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<18>   |    1.374(F)|      SLOW  |    2.789(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<19>   |    1.705(F)|      SLOW  |    2.142(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<20>   |    1.029(F)|      SLOW  |    2.301(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<21>   |    1.346(F)|      SLOW  |    1.984(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<22>   |    1.692(F)|      SLOW  |    2.138(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<23>   |    1.785(F)|      SLOW  |    3.029(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<24>   |    1.713(F)|      SLOW  |    2.777(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<25>   |    1.327(F)|      SLOW  |    3.154(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<26>   |    0.834(F)|      SLOW  |    2.315(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<27>   |    1.179(F)|      SLOW  |    3.342(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<28>   |    1.269(F)|      SLOW  |    2.309(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<29>   |    1.154(F)|      SLOW  |    2.373(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<30>   |    1.085(F)|      SLOW  |    2.445(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+DataB<31>   |    1.255(F)|      SLOW  |    3.174(F)|      SLOW  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+------------+------------+------------+------------+------------+----------------------------+--------+
+
+Clock Operation<0> to Pad
+-------------+-----------------+------------+-----------------+------------+----------------------------+--------+
+             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                            | Clock  |
+Destination  |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)           | Phase  |
+-------------+-----------------+------------+-----------------+------------+----------------------------+--------+
+AluResult<0> |         8.963(F)|      SLOW  |         4.295(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<1> |         8.979(F)|      SLOW  |         4.310(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<2> |         8.981(F)|      SLOW  |         4.312(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<3> |         8.950(F)|      SLOW  |         4.280(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<4> |         8.950(F)|      SLOW  |         4.281(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<5> |         8.985(F)|      SLOW  |         4.314(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<6> |         8.972(F)|      SLOW  |         4.301(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<7> |         9.001(F)|      SLOW  |         4.329(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<8> |         8.998(F)|      SLOW  |         4.327(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<9> |         8.982(F)|      SLOW  |         4.310(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<10>|         8.990(F)|      SLOW  |         4.317(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<11>|         8.978(F)|      SLOW  |         4.305(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<12>|         8.972(F)|      SLOW  |         4.300(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<13>|         8.971(F)|      SLOW  |         4.298(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<14>|         8.971(F)|      SLOW  |         4.298(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<15>|         8.972(F)|      SLOW  |         4.299(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<16>|         8.969(F)|      SLOW  |         4.296(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<17>|         8.929(F)|      SLOW  |         4.257(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<18>|         8.925(F)|      SLOW  |         4.250(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<19>|         8.987(F)|      SLOW  |         4.311(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<20>|         8.977(F)|      SLOW  |         4.301(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<21>|         8.984(F)|      SLOW  |         4.308(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<22>|         8.980(F)|      SLOW  |         4.304(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<23>|         8.991(F)|      SLOW  |         4.315(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<24>|         8.987(F)|      SLOW  |         4.312(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<25>|         8.963(F)|      SLOW  |         4.288(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<26>|         8.991(F)|      SLOW  |         4.315(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<27>|         8.982(F)|      SLOW  |         4.307(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<28>|         8.958(F)|      SLOW  |         4.284(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<29>|         8.983(F)|      SLOW  |         4.310(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<30>|         8.979(F)|      SLOW  |         4.306(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<31>|         8.985(F)|      SLOW  |         4.313(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+-------------+-----------------+------------+-----------------+------------+----------------------------+--------+
+
+Clock Operation<1> to Pad
+-------------+-----------------+------------+-----------------+------------+----------------------------+--------+
+             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                            | Clock  |
+Destination  |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)           | Phase  |
+-------------+-----------------+------------+-----------------+------------+----------------------------+--------+
+AluResult<0> |         8.814(F)|      SLOW  |         4.256(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<1> |         8.830(F)|      SLOW  |         4.271(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<2> |         8.832(F)|      SLOW  |         4.273(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<3> |         8.801(F)|      SLOW  |         4.241(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<4> |         8.801(F)|      SLOW  |         4.242(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<5> |         8.836(F)|      SLOW  |         4.275(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<6> |         8.823(F)|      SLOW  |         4.262(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<7> |         8.852(F)|      SLOW  |         4.290(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<8> |         8.849(F)|      SLOW  |         4.288(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<9> |         8.833(F)|      SLOW  |         4.271(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<10>|         8.841(F)|      SLOW  |         4.278(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<11>|         8.829(F)|      SLOW  |         4.266(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<12>|         8.823(F)|      SLOW  |         4.261(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<13>|         8.822(F)|      SLOW  |         4.259(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<14>|         8.822(F)|      SLOW  |         4.259(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<15>|         8.823(F)|      SLOW  |         4.260(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<16>|         8.820(F)|      SLOW  |         4.257(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<17>|         8.780(F)|      SLOW  |         4.218(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<18>|         8.776(F)|      SLOW  |         4.211(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<19>|         8.838(F)|      SLOW  |         4.272(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<20>|         8.828(F)|      SLOW  |         4.262(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<21>|         8.835(F)|      SLOW  |         4.269(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<22>|         8.831(F)|      SLOW  |         4.265(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<23>|         8.842(F)|      SLOW  |         4.276(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<24>|         8.838(F)|      SLOW  |         4.273(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<25>|         8.814(F)|      SLOW  |         4.249(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<26>|         8.842(F)|      SLOW  |         4.276(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<27>|         8.833(F)|      SLOW  |         4.268(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<28>|         8.809(F)|      SLOW  |         4.245(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<29>|         8.834(F)|      SLOW  |         4.271(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<30>|         8.830(F)|      SLOW  |         4.267(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<31>|         8.836(F)|      SLOW  |         4.274(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+-------------+-----------------+------------+-----------------+------------+----------------------------+--------+
+
+Clock Operation<2> to Pad
+-------------+-----------------+------------+-----------------+------------+----------------------------+--------+
+             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                            | Clock  |
+Destination  |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)           | Phase  |
+-------------+-----------------+------------+-----------------+------------+----------------------------+--------+
+AluResult<0> |         8.690(F)|      SLOW  |         4.150(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<1> |         8.706(F)|      SLOW  |         4.165(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<2> |         8.708(F)|      SLOW  |         4.167(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<3> |         8.677(F)|      SLOW  |         4.135(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<4> |         8.677(F)|      SLOW  |         4.136(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<5> |         8.712(F)|      SLOW  |         4.169(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<6> |         8.699(F)|      SLOW  |         4.156(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<7> |         8.728(F)|      SLOW  |         4.184(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<8> |         8.725(F)|      SLOW  |         4.182(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<9> |         8.709(F)|      SLOW  |         4.165(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<10>|         8.717(F)|      SLOW  |         4.172(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<11>|         8.705(F)|      SLOW  |         4.160(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<12>|         8.699(F)|      SLOW  |         4.155(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<13>|         8.698(F)|      SLOW  |         4.153(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<14>|         8.698(F)|      SLOW  |         4.153(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<15>|         8.699(F)|      SLOW  |         4.154(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<16>|         8.696(F)|      SLOW  |         4.151(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<17>|         8.656(F)|      SLOW  |         4.112(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<18>|         8.652(F)|      SLOW  |         4.105(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<19>|         8.714(F)|      SLOW  |         4.166(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<20>|         8.704(F)|      SLOW  |         4.156(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<21>|         8.711(F)|      SLOW  |         4.163(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<22>|         8.707(F)|      SLOW  |         4.159(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<23>|         8.718(F)|      SLOW  |         4.170(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<24>|         8.714(F)|      SLOW  |         4.167(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<25>|         8.690(F)|      SLOW  |         4.143(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<26>|         8.718(F)|      SLOW  |         4.170(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<27>|         8.709(F)|      SLOW  |         4.162(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<28>|         8.685(F)|      SLOW  |         4.139(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<29>|         8.710(F)|      SLOW  |         4.165(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<30>|         8.706(F)|      SLOW  |         4.161(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<31>|         8.712(F)|      SLOW  |         4.168(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+-------------+-----------------+------------+-----------------+------------+----------------------------+--------+
+
+Clock Operation<3> to Pad
+-------------+-----------------+------------+-----------------+------------+----------------------------+--------+
+             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                            | Clock  |
+Destination  |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)           | Phase  |
+-------------+-----------------+------------+-----------------+------------+----------------------------+--------+
+AluResult<0> |         8.189(F)|      SLOW  |         3.888(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<1> |         8.205(F)|      SLOW  |         3.903(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<2> |         8.207(F)|      SLOW  |         3.905(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<3> |         8.176(F)|      SLOW  |         3.873(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<4> |         8.176(F)|      SLOW  |         3.874(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<5> |         8.211(F)|      SLOW  |         3.907(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<6> |         8.198(F)|      SLOW  |         3.894(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<7> |         8.227(F)|      SLOW  |         3.922(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<8> |         8.224(F)|      SLOW  |         3.920(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<9> |         8.208(F)|      SLOW  |         3.903(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<10>|         8.216(F)|      SLOW  |         3.910(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<11>|         8.204(F)|      SLOW  |         3.898(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<12>|         8.198(F)|      SLOW  |         3.893(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<13>|         8.197(F)|      SLOW  |         3.891(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<14>|         8.197(F)|      SLOW  |         3.891(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<15>|         8.198(F)|      SLOW  |         3.892(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<16>|         8.195(F)|      SLOW  |         3.889(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<17>|         8.155(F)|      SLOW  |         3.850(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<18>|         8.151(F)|      SLOW  |         3.843(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<19>|         8.213(F)|      SLOW  |         3.904(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<20>|         8.203(F)|      SLOW  |         3.894(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<21>|         8.210(F)|      SLOW  |         3.901(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<22>|         8.206(F)|      SLOW  |         3.897(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<23>|         8.217(F)|      SLOW  |         3.908(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<24>|         8.213(F)|      SLOW  |         3.905(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<25>|         8.189(F)|      SLOW  |         3.881(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<26>|         8.217(F)|      SLOW  |         3.908(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<27>|         8.208(F)|      SLOW  |         3.900(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<28>|         8.184(F)|      SLOW  |         3.877(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<29>|         8.209(F)|      SLOW  |         3.903(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<30>|         8.205(F)|      SLOW  |         3.899(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<31>|         8.211(F)|      SLOW  |         3.906(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+-------------+-----------------+------------+-----------------+------------+----------------------------+--------+
+
+Clock Operation<4> to Pad
+-------------+-----------------+------------+-----------------+------------+----------------------------+--------+
+             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                            | Clock  |
+Destination  |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)           | Phase  |
+-------------+-----------------+------------+-----------------+------------+----------------------------+--------+
+AluResult<0> |         8.455(F)|      SLOW  |         4.068(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<1> |         8.471(F)|      SLOW  |         4.083(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<2> |         8.473(F)|      SLOW  |         4.085(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<3> |         8.442(F)|      SLOW  |         4.053(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<4> |         8.442(F)|      SLOW  |         4.054(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<5> |         8.477(F)|      SLOW  |         4.087(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<6> |         8.464(F)|      SLOW  |         4.074(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<7> |         8.493(F)|      SLOW  |         4.102(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<8> |         8.490(F)|      SLOW  |         4.100(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<9> |         8.474(F)|      SLOW  |         4.083(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<10>|         8.482(F)|      SLOW  |         4.090(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<11>|         8.470(F)|      SLOW  |         4.078(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<12>|         8.464(F)|      SLOW  |         4.073(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<13>|         8.463(F)|      SLOW  |         4.071(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<14>|         8.463(F)|      SLOW  |         4.071(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<15>|         8.464(F)|      SLOW  |         4.072(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<16>|         8.461(F)|      SLOW  |         4.069(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<17>|         8.421(F)|      SLOW  |         4.030(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<18>|         8.417(F)|      SLOW  |         4.023(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<19>|         8.479(F)|      SLOW  |         4.084(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<20>|         8.469(F)|      SLOW  |         4.074(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<21>|         8.476(F)|      SLOW  |         4.081(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<22>|         8.472(F)|      SLOW  |         4.077(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<23>|         8.483(F)|      SLOW  |         4.088(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<24>|         8.479(F)|      SLOW  |         4.085(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<25>|         8.455(F)|      SLOW  |         4.061(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<26>|         8.483(F)|      SLOW  |         4.088(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<27>|         8.474(F)|      SLOW  |         4.080(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<28>|         8.450(F)|      SLOW  |         4.057(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<29>|         8.475(F)|      SLOW  |         4.083(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<30>|         8.471(F)|      SLOW  |         4.079(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<31>|         8.477(F)|      SLOW  |         4.086(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+-------------+-----------------+------------+-----------------+------------+----------------------------+--------+
+
+Clock Operation<5> to Pad
+-------------+-----------------+------------+-----------------+------------+----------------------------+--------+
+             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                            | Clock  |
+Destination  |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)           | Phase  |
+-------------+-----------------+------------+-----------------+------------+----------------------------+--------+
+AluResult<0> |         8.741(F)|      SLOW  |         4.186(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<1> |         8.757(F)|      SLOW  |         4.201(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<2> |         8.759(F)|      SLOW  |         4.203(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<3> |         8.728(F)|      SLOW  |         4.171(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<4> |         8.728(F)|      SLOW  |         4.172(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<5> |         8.763(F)|      SLOW  |         4.205(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<6> |         8.750(F)|      SLOW  |         4.192(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<7> |         8.779(F)|      SLOW  |         4.220(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<8> |         8.776(F)|      SLOW  |         4.218(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<9> |         8.760(F)|      SLOW  |         4.201(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<10>|         8.768(F)|      SLOW  |         4.208(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<11>|         8.756(F)|      SLOW  |         4.196(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<12>|         8.750(F)|      SLOW  |         4.191(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<13>|         8.749(F)|      SLOW  |         4.189(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<14>|         8.749(F)|      SLOW  |         4.189(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<15>|         8.750(F)|      SLOW  |         4.190(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<16>|         8.747(F)|      SLOW  |         4.187(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<17>|         8.707(F)|      SLOW  |         4.148(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<18>|         8.703(F)|      SLOW  |         4.141(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<19>|         8.765(F)|      SLOW  |         4.202(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<20>|         8.755(F)|      SLOW  |         4.192(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<21>|         8.762(F)|      SLOW  |         4.199(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<22>|         8.758(F)|      SLOW  |         4.195(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<23>|         8.769(F)|      SLOW  |         4.206(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<24>|         8.765(F)|      SLOW  |         4.203(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<25>|         8.741(F)|      SLOW  |         4.179(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<26>|         8.769(F)|      SLOW  |         4.206(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<27>|         8.760(F)|      SLOW  |         4.198(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<28>|         8.736(F)|      SLOW  |         4.175(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<29>|         8.761(F)|      SLOW  |         4.201(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<30>|         8.757(F)|      SLOW  |         4.197(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+AluResult<31>|         8.763(F)|      SLOW  |         4.204(F)|      FAST  |GND_1_o_GND_1_o_OR_67_o_BUFG|   0.000|
+-------------+-----------------+------------+-----------------+------------+----------------------------+--------+
+
+Clock to Setup on destination clock Operation<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Operation<0>   |         |         |    3.895|    3.895|
+Operation<1>   |         |         |    3.667|    3.667|
+Operation<2>   |         |         |    3.982|    3.982|
+Operation<3>   |         |         |    3.330|    3.330|
+Operation<4>   |         |         |    3.993|    3.993|
+Operation<5>   |         |         |    3.788|    3.788|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Operation<1>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Operation<0>   |         |         |    4.006|    4.006|
+Operation<1>   |         |         |    3.778|    3.778|
+Operation<2>   |         |         |    4.093|    4.093|
+Operation<3>   |         |         |    3.441|    3.441|
+Operation<4>   |         |         |    4.104|    4.104|
+Operation<5>   |         |         |    3.899|    3.899|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Operation<2>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Operation<0>   |         |         |    4.125|    4.125|
+Operation<1>   |         |         |    3.897|    3.897|
+Operation<2>   |         |         |    4.212|    4.212|
+Operation<3>   |         |         |    3.560|    3.560|
+Operation<4>   |         |         |    4.223|    4.223|
+Operation<5>   |         |         |    4.018|    4.018|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Operation<3>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Operation<0>   |         |         |    4.540|    4.540|
+Operation<1>   |         |         |    4.312|    4.312|
+Operation<2>   |         |         |    4.627|    4.627|
+Operation<3>   |         |         |    3.975|    3.975|
+Operation<4>   |         |         |    4.638|    4.638|
+Operation<5>   |         |         |    4.433|    4.433|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Operation<4>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Operation<0>   |         |         |    4.309|    4.309|
+Operation<1>   |         |         |    4.081|    4.081|
+Operation<2>   |         |         |    4.396|    4.396|
+Operation<3>   |         |         |    3.744|    3.744|
+Operation<4>   |         |         |    4.407|    4.407|
+Operation<5>   |         |         |    4.202|    4.202|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Operation<5>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Operation<0>   |         |         |    4.075|    4.075|
+Operation<1>   |         |         |    3.847|    3.847|
+Operation<2>   |         |         |    4.162|    4.162|
+Operation<3>   |         |         |    3.510|    3.510|
+Operation<4>   |         |         |    4.173|    4.173|
+Operation<5>   |         |         |    3.968|    3.968|
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+DataA<0>       |Zero           |    8.747|
+DataA<1>       |Zero           |    8.710|
+DataA<2>       |Zero           |    9.001|
+DataA<3>       |Zero           |    8.846|
+DataA<4>       |Zero           |    8.466|
+DataA<5>       |Zero           |    8.611|
+DataA<6>       |Zero           |    8.541|
+DataA<7>       |Zero           |    8.260|
+DataA<8>       |Zero           |    8.278|
+DataA<9>       |Zero           |    8.262|
+DataA<10>      |Zero           |    8.401|
+DataA<11>      |Zero           |    7.968|
+DataA<12>      |Zero           |    8.433|
+DataA<13>      |Zero           |    7.937|
+DataA<14>      |Zero           |    8.258|
+DataA<15>      |Zero           |    8.425|
+DataA<16>      |Zero           |    7.980|
+DataA<17>      |Zero           |    7.883|
+DataA<18>      |Zero           |    8.351|
+DataA<19>      |Zero           |    8.079|
+DataA<20>      |Zero           |    8.286|
+DataA<21>      |Zero           |    8.073|
+DataA<22>      |Zero           |    7.574|
+DataA<23>      |Zero           |    8.569|
+DataA<24>      |Zero           |    8.083|
+DataA<25>      |Zero           |    8.359|
+DataA<26>      |Zero           |    8.360|
+DataA<27>      |Zero           |    8.494|
+DataA<28>      |Zero           |    8.340|
+DataA<29>      |Zero           |    8.232|
+DataA<30>      |Zero           |    8.064|
+DataA<31>      |Zero           |    8.364|
+DataB<0>       |Zero           |    8.744|
+DataB<1>       |Zero           |    8.148|
+DataB<2>       |Zero           |    8.256|
+DataB<3>       |Zero           |    8.383|
+DataB<4>       |Zero           |    8.127|
+DataB<5>       |Zero           |    8.465|
+DataB<6>       |Zero           |    8.522|
+DataB<7>       |Zero           |    7.703|
+DataB<8>       |Zero           |    8.390|
+DataB<9>       |Zero           |    7.907|
+DataB<10>      |Zero           |    8.258|
+DataB<11>      |Zero           |    8.188|
+DataB<12>      |Zero           |    8.169|
+DataB<13>      |Zero           |    8.376|
+DataB<14>      |Zero           |    8.203|
+DataB<15>      |Zero           |    8.475|
+DataB<16>      |Zero           |    8.280|
+DataB<17>      |Zero           |    7.959|
+DataB<18>      |Zero           |    8.031|
+DataB<19>      |Zero           |    8.411|
+DataB<20>      |Zero           |    7.863|
+DataB<21>      |Zero           |    8.594|
+DataB<22>      |Zero           |    8.331|
+DataB<23>      |Zero           |    8.713|
+DataB<24>      |Zero           |    8.707|
+DataB<25>      |Zero           |    8.014|
+DataB<26>      |Zero           |    8.073|
+DataB<27>      |Zero           |    8.246|
+DataB<28>      |Zero           |    8.151|
+DataB<29>      |Zero           |    8.210|
+DataB<30>      |Zero           |    8.044|
+DataB<31>      |Zero           |    8.179|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Jun 11 14:43:01 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 5004 MB
+
+
+
