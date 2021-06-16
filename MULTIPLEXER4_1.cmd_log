@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj project -o E:/University/MEMARI/project1/project/MULTIPLEXER4_1.tfi -lib work E:/University/MEMARI/project1/project//MULTIPLEXER4_1.v -module MULTIPLEXER4_1 -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

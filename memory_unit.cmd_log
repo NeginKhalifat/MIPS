@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj project -o E:/University/MEMARI/project1/project/memory_unit.tfi -lib work E:/University/MEMARI/project1/project//memory_unit.v -module memory_unit -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

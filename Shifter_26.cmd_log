@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj project -o E:/University/MEMARI/project1/project/Shifter_26.tfi -lib work E:/University/MEMARI/project1/project//Shifter_26.v -module Shifter_26 -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj project -o E:/University/MEMARI/project1/project/Controller.tfi -lib work E:/University/MEMARI/project1/project//Controller.v -module Controller -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
